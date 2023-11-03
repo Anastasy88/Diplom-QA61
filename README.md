@@ -1,23 +1,25 @@
 
 # Задача:
 Автоматизировать позитивные и негативные сценарии покупки тура в комплексном сервисе, взаимодействующем с СУБД и API Банка.
+
 ![image](https://user-images.githubusercontent.com/111686304/222439553-cbfff26c-3e61-4461-8b5a-5c60c15eaabc.png)
+
 Приложение — это веб-сервис, который предлагает купить тур по определённой цене двумя способами:
 1. Обычная оплата по дебетовой карте.
 2. Уникальная технология: выдача кредита по данным банковской карты.
 
 # Инструкция подключения БД и запуска SUT:
-1.Запустить программу Docker Desktop
-2.Запустить программу IntelliJ IDEA
-3.Склонировать проект из репозитория командой: git clone
-4.Запустить контейнеры командой docker-compose up
-5.Открыть новую вкладку в терминале и написать команды для запуска приложений:
- * для запуска с подключением к MySQL используем команду: java -jar artifacts/aqa-shop.jar --spring.datasource.url=jdbc:mysql://localhost:3306/app
- * для запуска с подключением к PostgreSQL используем команду: java -jar artifacts/aqa-shop.jar --spring.datasource.url=jdbc:postgresql://localhost:5432/app
-6.Далее запускаем тесты во второй вкладке Terminal, используя команды:
- * для запуска с подключением к MySQL PostgreSQL используем команду: .\gradlew clean test -DdbUrl=jdbc:mysql://localhost:3306/app
- * для запуска с подключением к PostgreSQL используем команду: .\gradlew clean test -DdbUrl=jdbc:postgresql://localhost:5432/app
-7.Для того,чтобы получить отчет после прогона тестов используем команду: .\gradlew allureServe
-8.Для того,чтобы закрыть отчет используем команду Ctrl + C, подтверждаем выход, нажамая на Y
-9.Для того,чтобы Закрыть приложение пишем команду  CTRL + C в первой вкладке Terminal
+1.Запустить программу Docker Desktop \
+2.Запустить программу IntelliJ IDEA \
+3.Склонировать проект из репозитория командой: git clone \
+4.Запустить контейнеры командой docker-compose up \
+5.Открыть новую вкладку в терминале и написать команды для запуска приложений: \
+   * для запуска с подключением к MySQL используем команду: java -jar artifacts/aqa-shop.jar --spring.datasource.url=jdbc:mysql://localhost:3306/app \
+   * для запуска с подключением к PostgreSQL используем команду: java -jar artifacts/aqa-shop.jar --spring.datasource.url=jdbc:postgresql://localhost:5432/app \
+6.Далее запускаем тесты во второй вкладке Terminal, используя команды: \
+   * для запуска с подключением к MySQL PostgreSQL используем команду: .\gradlew clean test -DdbUrl=jdbc:mysql://localhost:3306/app \
+   * для запуска с подключением к PostgreSQL используем команду: .\gradlew clean test -DdbUrl=jdbc:postgresql://localhost:5432/app \
+7.Для того,чтобы получить отчет после прогона тестов используем команду: .\gradlew allureServe \
+8.Для того,чтобы закрыть отчет используем команду Ctrl + C, подтверждаем выход, нажамая на Y \
+9.Для того,чтобы Закрыть приложение пишем команду  CTRL + C в первой вкладке Terminal \
 10.Когда остановили приложения нужно остановить контейнеры , используя команду docker-compose down
